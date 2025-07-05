@@ -19,11 +19,11 @@ public class FlipkartDropdown{
         WebElement mobiledp = driver.findElement(By.xpath("//img[@alt='Fashion']/ancestor::div[@class='YBLJE4']"));
         Select select = new Select(mobiledp);
         select.selectByVisibleText("Women Ethnic");
-//        List<WebElement> list = select.getOptions();
-//        for (WebElement s : list) {
-//            select.deselectByValue(String.valueOf(s));
-//            System.out.println(s);
-//        }
+       List<WebElement> list = select.getOptions();
+       for (WebElement s : list) {
+           select.deselectByValue(String.valueOf(s));
+           System.out.println(s);
+       }
     }
 
     public static void main(String[] args) {
